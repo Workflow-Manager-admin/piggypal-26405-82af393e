@@ -38,11 +38,25 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Baloo 2', 'Comic Neue', 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
   background-color: var(--kavia-dark);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+@media (max-width: 650px) {
+  body {
+    font-size: 95%;
+  }
+}
+
+/* Baseline for image-like cartoonish look */
+img, svg {
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-playful);
+  max-width: 100%;
 }
 
 .app {
