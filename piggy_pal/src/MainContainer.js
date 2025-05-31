@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./MainContainer.css";
 
 // Color palette from requirements
 const COLORS = {

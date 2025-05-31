@@ -1,0 +1,81 @@
+.piggypal-main {
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 60% 0%, #23262f 50%, #181A20 100%);
+  color: #fff;
+  font-family: 'Baloo 2', 'Quicksand', 'Comic Neue', 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+.piggypal-main header {
+  background: none !important;
+}
+.piggypal-tabcard {
+  background: #23262F;
+  margin: 1.6rem 0 5.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 4px 16px rgba(20,0,40,0.15);
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.piggypal-bottom-nav {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  width: 100vw;
+  background: #23262f;
+  box-shadow: 0 -4px 16px rgba(20,0,40,0.26);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  z-index: 110;
+}
+.piggypal-bottom-nav button {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 17px;
+  color: #fff;
+  font-weight: 700;
+  opacity: .8;
+  transition: color .13s, opacity .16s, transform .18s;
+  border-radius: 13px;
+  padding: 0.2rem 0;
+}
+.piggypal-bottom-nav button[aria-current="true"] {
+  color: #1DE9B6;
+  opacity: 1;
+  font-weight: 900;
+  transform: scale(1.13);
+  background: linear-gradient(120deg, #23262F 70%, #1DE9B614 100%);
+  box-shadow: 0 0 16px #1DE9B660;
+}
+.piggypal-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid #1DE9B6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(30,233,182,0.08);
+}
+.piggypal-tabcard h2 {
+  margin: 0.7rem 0 0.5rem;
+  font-size: 2.1rem;
+  font-family: inherit;
+}
+.piggypal-tabcard p {
+  margin: 0.5rem auto 0;
+  color: #fffacb;
+  font-size: 1.1rem;
+  text-align: center;
+  letter-spacing: 0.3px;
+  max-width: 430px;
+}
