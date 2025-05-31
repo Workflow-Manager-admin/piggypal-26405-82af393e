@@ -192,22 +192,45 @@ img, svg {
 }
 
 .btn {
-  background-color: var(--kavia-orange);
-  color: white;
+  background: linear-gradient(93deg, var(--primary) 38%, var(--secondary) 100%);
+  color: #fff;
   border: none;
-  border-radius: 4px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: 500;
+  border-radius: var(--radius-md);
+  padding: 11px 24px;
+  font-size: 1.13rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: box-shadow var(--transition-main), background var(--transition-main);
+  box-shadow: 0 1.5px 7px 0 rgba(255,214,0,0.07);
+  text-shadow: 0 1.5px 2.5px rgba(0,0,0,0.11);
+  letter-spacing: 0.01em;
 }
 
-.btn:hover {
-  background-color: #FF8B4D;
+.btn:active {
+  box-shadow: 0 1.5px 2.5px 0 rgba(29,233,182,0.14);
+  transform: scale(0.97);
+}
+
+.btn:hover, .btn:focus-visible {
+  background: linear-gradient(93deg, var(--secondary) 30%, var(--primary) 100%);
+  box-shadow: 0 4px 16px 0 rgba(253,214,0, 0.13);
+  outline: none;
 }
 
 .btn-large {
-  padding: 12px 24px;
-  font-size: 1.1rem;
+  padding: 14px 30px;
+  font-size: 1.17rem;
+  border-radius: var(--radius-lg);
 }
+
+.btn-rounded {
+  border-radius: 99px;
+}
+
+.btn-coral { background: var(--secondary); }
+.btn-primary { background: var(--primary); }
+.btn-yellow { background: var(--accent-yellow); color: #383838;}
+.btn-purple { background: var(--accent-purple); }
+
+.btn-shadow-soft { box-shadow: var(--shadow-soft);}
+.btn-shadow-playful { box-shadow: var(--shadow-playful);}
