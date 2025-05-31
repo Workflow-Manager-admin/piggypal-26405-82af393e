@@ -6,9 +6,12 @@
   --border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Import Baloo 2 from Google Fonts for a cartoon, playful vibe */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: 'Baloo 2', 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
   background-color: var(--kavia-dark);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
