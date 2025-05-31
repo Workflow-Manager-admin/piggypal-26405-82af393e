@@ -39,3 +39,27 @@ webpack compiled successfully
 Compiling...
 Compiled successfully!
 webpack compiled successfully
+Compiling...
+Failed to compile.
+
+Syntax error: /home/kavia/workspace/code-generation/piggypal-26405-82af393e/piggy_pal/src/App.css At-rule without name (63489:2)
+  63487 |   .container { padding: 0 12px; }
+  63488 |   .card     { padding: 16px 8px; }
+> 63489 | }@/* ==== Utility Classes ==== */
+        |  ^
+  63490 | .rounded-lg  { border-radius: var(--radius-lg) !important; }
+  63491 | .rounded-md  { border-radius: var(--radius-md) !important; }
+ERROR in ./src/App.css (./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[5].use[2]!./node_modules/source-map-loader/dist/cjs.js!./src/App.css)
+Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):
+SyntaxError
+
+(63489:2) /home/kavia/workspace/code-generation/piggypal-26405-82af393e/piggy_pal/src/App.css At-rule without name
+
+  63487 |   .container { padding: 0 12px; }
+  63488 |   .card     { padding: 16px 8px; }
+> 63489 | }@/* ==== Utility Classes ==== */
+        |  ^
+  63490 | .rounded-lg  { border-radius: var(--radius-lg) !important; }
+  63491 | .rounded-md  { border-radius: var(--radius-md) !important; }
+
+webpack compiled with 1 error
