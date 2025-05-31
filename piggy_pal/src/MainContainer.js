@@ -1,5 +1,12 @@
 import React, { useState } from "react";
 import "./MainContainer.css";
+import HomeDashboard from "./components/HomeDashboard";
+import GoalSetup from "./components/GoalSetup";
+import Gamification from "./components/Gamification";
+import ParentDashboard from "./components/ParentDashboard";
+import LearningCenter from "./components/LearningCenter";
+import SavingsReport from "./components/SavingsReport";
+import SecurityAndSharing from "./components/SecurityAndSharing";
 
 // Color palette from requirements
 const COLORS = {
@@ -107,25 +114,6 @@ function PiggyAvatar({ size = 48 }) {
   );
 }
 
-import HomeDashboard from "./components/HomeDashboard";
-import GoalSetup from "./components/GoalSetup";
-import Gamification from "./components/Gamification";
-import ParentDashboard from "./components/ParentDashboard";
-import LearningCenter from "./components/LearningCenter";
-import SavingsReport from "./components/SavingsReport";
-import SecurityAndSharing from "./components/SecurityAndSharing";
-
-// --- Modular feature imports for each tab at top-level
-import HomeDashboard from "./components/HomeDashboard";
-import GoalSetup from "./components/GoalSetup";
-import Gamification from "./components/Gamification";
-import ParentDashboard from "./components/ParentDashboard";
-import LearningCenter from "./components/LearningCenter";
-import SavingsReport from "./components/SavingsReport";
-import SecurityAndSharing from "./components/SecurityAndSharing";
-
-// (Duplicate imports removed from inside file body)
-
 // Individual "screen" selector for each tab
 function TabScreen({ tab }) {
   switch (tab.key) {
@@ -145,27 +133,6 @@ function TabScreen({ tab }) {
       return <SecurityAndSharing />;
     default:
       return null;
-  }
-}
-
-function getTabDescription(tabKey) {
-  switch(tabKey) {
-    case "home":
-      return "See your piggy jars, avatars, and goal progress at a glance!";
-    case "goal":
-      return "Set up goals, pick a piggy style, and watch your savings grow.";
-    case "game":
-      return "Spin, play, and earn badges to level up your piggy!";
-    case "parent":
-      return "Parents manage accounts, chores, and allowance easily.";
-    case "learn":
-      return "Fun lessons and quizzes for smart savers.";
-    case "report":
-      return "Visualize your savings and track milestones!";
-    case "security":
-      return "Lock your jars, set up PIN, and safely share or invite others!";
-    default:
-      return "";
   }
 }
 
