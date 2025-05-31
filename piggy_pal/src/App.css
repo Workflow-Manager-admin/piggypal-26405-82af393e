@@ -63,6 +63,11 @@ img, svg {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: var(--surface-bg);
+  /* subtle star pattern for playful feel, using data-url SVG */
+  background-image: radial-gradient(rgba(255,255,255,0.011) 0.7px, transparent 1px),
+                    radial-gradient(rgba(255,255,255,0.009) 1px, transparent 1.5px);
+  background-size: 52px 52px, 26px 26px;
 }
 
 .navbar {
