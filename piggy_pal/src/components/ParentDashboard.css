@@ -1,0 +1,64 @@
+.parent-dashboard-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.parent-dashboard-title {
+  color: #8e24aa;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 0 1.1rem 0;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 11px #8e24aa5e;
+}
+.parent-dashboard-card {
+  background: linear-gradient(88deg, #23262f 80%, #8e24aa46 100%);
+  border-radius: 1.5rem;
+  padding: 1.15rem 1.4rem 1.3rem 1.2rem;
+  box-shadow: 0 4px 18px #8e24aa28;
+  min-width: 290px;
+  color: #ffd600;
+  font-size: 1.04rem;
+}
+.parent-dashboard-children-list, .parent-dashboard-chores-list {
+  list-style: none;
+  padding: 3px 0 9px 9px;
+  margin: 0 0 5px 0;
+}
+.parent-dashboard-children-list li, .parent-dashboard-chores-list li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 2px 0 0 0;
+}
+
+.parent-dashboard-children-list button,
+.parent-dashboard-chores-list button {
+  background: #ffd60044;
+  color: #23262f;
+  border-radius: 1rem;
+  border: none;
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 4px 13px;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.parent-dashboard-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 7px;
+}
+.parent-dashboard-actions button {
+  background: linear-gradient(94deg, #ffd600 60%, #8e24aa 110%);
+  color: #222;
+  border: none;
+  border-radius: 1.1rem;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 7px 13px;
+  opacity: .55;
+  cursor: not-allowed;
+  box-shadow: 0 1px 7px #ffd60011;
+}
