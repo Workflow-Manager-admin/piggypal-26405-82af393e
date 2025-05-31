@@ -115,8 +115,8 @@ function PiggyAvatar({ size = 48 }) {
 }
 
 // Individual "screen" selector for each tab
-function TabScreen({ tab }) {
-  switch (tab.key) {
+function TabScreen({ tabKey }) {
+  switch (tabKey) {
     case "home":
       return <HomeDashboard />;
     case "goal":
@@ -137,53 +137,25 @@ function TabScreen({ tab }) {
 }
 
 // Bottom-tab navigation bar
-function BottomTabNav({ active, onSwitch }) {
+function BottomTabNav({ activeTab, onSwitchTab }) {
   return (
     <nav
       role="tablist"
       aria-label="Main app navigation"
-      style={{
-        position: "fixed",
-        bottom: 0,
-        left: 0,
-        width: "100vw",
-        background: COLORS.surface,
-        boxShadow: "0 -4px 16px rgba(20,0,40,0.26)",
-        borderTopLeftRadius: 16,
-        borderTopRightRadius: 16,
-        display: "flex",
-        justifyContent: "space-around",
-        padding: "10px 0 10px 0",
-        zIndex: 110,
-      }}
+      className="piggypal-bottom-nav"
     >
       {TAB_LIST.map((tab) => (
         <button
           key={tab.key}
-          onClick={() => onSwitch(tab.key)}
-          aria-current={active === tab.key}
-          style={{
-            flex: 1,
-            background: "none",
-            border: "none",
-            outline: "none",
-            cursor: "pointer",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            transition: "color 0.1s, transform 0.15s",
-            color: active === tab.key ? tab.color : "#fff",
-            fontSize: 17,
-            padding: "3px 0",
-            fontWeight: 700,
-            opacity: active === tab.key ? 1 : 0.6,
-            transform: active === tab.key ? "scale(1.13)" : "scale(1)"
-          }}
+          onClick={() => onSwitchTab(tab.key)}
+          aria-current={activeTab === tab.key ? "true" : undefined}
+          tabIndex={0}
+          type="button"
         >
           <span
             style={{
               fontSize: 28,
-              filter: active === tab.key ? "drop-shadow(0 2px 7px "+tab.color+"44)" : "",
+              filter: activeTab === tab.key ? "drop-shadow(0 2px 7px "+tab.color+"44)" : "",
               marginBottom: 2,
               transition: "filter 0.15s"
             }}
@@ -193,9 +165,13 @@ function BottomTabNav({ active, onSwitch }) {
           <span
             style={{
               fontSize: 13,
-              textShadow: active === tab.key ? `0 1px 8px ${tab.color}33` : "",
+              textShadow: activeTab === tab.key ? `0 1px 8px ${tab.color}33` : "",
               borderRadius: 8,
-              padding: active === tab.key ? "1.5px 7px" : "1.5px 0px"
+              padding: activeTab === tab.key ? "1.5px 7px" : "1.5px 0px",
+              color: activeTab === tab.key ? tab.color : "#fff",
+              fontWeight: activeTab === tab.key ? 900 : 700,
+              opacity: activeTab === tab.key ? 1 : 0.7,
+              transition: "color .13s, opacity .16s, transform .18s"
             }}
           >
             {tab.label}
@@ -213,6 +189,16 @@ function BottomTabNav({ active, onSwitch }) {
  */
 function MainContainer() {
   const [activeTab, setActiveTab] = useState("home");
+
+  /**
+   * Handler function for tab navigation.
+   * Ensures only valid tab keys are accepted.
+   */
+  const handleSwitchTab = (tabKey) => {
+    if (TAB_LIST.some(tab => tab.key === tabKey)) {
+      setActiveTab(tabKey);
+    }
+  };
 
   return (
     <div
@@ -281,10 +267,10 @@ function MainContainer() {
         margin: "0 auto",
         paddingBottom: "5rem"
       }}>
-        <TabScreen tab={TAB_LIST.find(t => t.key === activeTab)} />
+        <TabScreen tabKey={activeTab} />
       </main>
 
-      <BottomTabNav active={activeTab} onSwitch={setActiveTab} />
+      <BottomTabNav activeTab={activeTab} onSwitchTab={handleSwitchTab} />
     </div>
   );
 }
