@@ -115,6 +115,15 @@ import LearningCenter from "./components/LearningCenter";
 import SavingsReport from "./components/SavingsReport";
 import SecurityAndSharing from "./components/SecurityAndSharing";
 
+// --- Modular feature imports for each tab at top-level
+import HomeDashboard from "./components/HomeDashboard";
+import GoalSetup from "./components/GoalSetup";
+import Gamification from "./components/Gamification";
+import ParentDashboard from "./components/ParentDashboard";
+import LearningCenter from "./components/LearningCenter";
+import SavingsReport from "./components/SavingsReport";
+import SecurityAndSharing from "./components/SecurityAndSharing";
+
 // Individual "screen" selector for each tab
 function TabScreen({ tab }) {
   switch (tab.key) {
