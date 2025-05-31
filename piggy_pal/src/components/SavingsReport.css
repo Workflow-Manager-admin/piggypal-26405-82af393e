@@ -1,0 +1,57 @@
+.report-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.report-title {
+  color: #1de9b6;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 0 1rem 0;
+  text-shadow: 0 2px 12px #1de9b633;
+  letter-spacing: 1px;
+}
+.report-graph-placeholder {
+  margin: 0 0 1.1rem 0;
+  width: 95%;
+  max-width: 290px;
+  height: 110px;
+  background: linear-gradient(90deg, #23262f 70%, #ff6f6137 100%);
+  border-radius: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffd600;
+  box-shadow: 0 4px 15px #ffd60013;
+}
+.report-graph-emoji {
+  font-size: 2.6rem;
+}
+.report-graph-desc {
+  margin-top: 7px;
+  font-size: 1.08rem;
+}
+.report-streak-container {
+  color: #ffd600;
+  margin-bottom: 7px;
+  font-size: 1.04rem;
+}
+.report-milestones {
+  margin-top: 13px;
+  color: #ffd600;
+  font-size: 1.04rem;
+}
+.report-milestones ul {
+  margin: 3px 0 6px 14px;
+}
+.report-ai-suggest {
+  margin-top: 12px;
+  color: #ff6f61;
+  border-left: 3.6px solid #ffd600;
+  background: #ffd60015;
+  border-radius: 8px;
+  padding: 6px 13px;
+  font-size: 1.08rem;
+  max-width: 320px;
+}
