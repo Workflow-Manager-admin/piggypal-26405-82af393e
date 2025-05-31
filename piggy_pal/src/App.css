@@ -77,11 +77,13 @@ img, svg {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--border-color);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
   position: fixed;
   top: 0;
   width: 100%;
   box-sizing: border-box;
   z-index: 100;
+  box-shadow: var(--shadow-playful);
 }
 
 .logo {
