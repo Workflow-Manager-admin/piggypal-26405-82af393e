@@ -26,49 +26,49 @@ const COLORS = {
 const TAB_LIST = [
   {
     key: "home",
-    label: "Home",
+    label: "Home Dashboard",
     icon: "🏠",
     color: COLORS.primary,
     desc: "Dashboard with jars and avatars"
   },
   {
     key: "goal",
-    label: "Goal",
+    label: "Goal Setup",
     icon: "🎯",
     color: COLORS.accentYellow,
     desc: "Goal setup and management"
   },
   {
     key: "game",
-    label: "Fun",
+    label: "Gamification",
     icon: "🎮",
     color: COLORS.secondary,
     desc: "Gamification and rewards"
   },
   {
     key: "parent",
-    label: "Parent",
+    label: "Parent Dashboard",
     icon: "👨‍👩‍👧",
     color: COLORS.accentPurple,
     desc: "Parent dashboard"
   },
   {
     key: "learn",
-    label: "Learn",
+    label: "Learning Center",
     icon: "📚",
     color: COLORS.accentYellow,
     desc: "Learning center"
   },
   {
     key: "report",
-    label: "Report",
+    label: "Savings Report",
     icon: "📈",
     color: COLORS.primary,
     desc: "Savings report"
   },
   {
     key: "security",
-    label: "Security",
+    label: "Security & Sharing",
     icon: "🔒",
     color: COLORS.secondary,
     desc: "Security & sharing"
