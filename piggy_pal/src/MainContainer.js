@@ -107,57 +107,34 @@ function PiggyAvatar({ size = 48 }) {
   );
 }
 
-// Individual "screen" placeholder for each tab
+import HomeDashboard from "./components/HomeDashboard";
+import GoalSetup from "./components/GoalSetup";
+import Gamification from "./components/Gamification";
+import ParentDashboard from "./components/ParentDashboard";
+import LearningCenter from "./components/LearningCenter";
+import SavingsReport from "./components/SavingsReport";
+import SecurityAndSharing from "./components/SecurityAndSharing";
+
+// Individual "screen" selector for each tab
 function TabScreen({ tab }) {
-  // For feature expansion, swap for real feature components
-  return (
-    <section
-      style={{
-        background: COLORS.surface,
-        margin: "1.5rem 0 6rem",
-        borderRadius: 24,
-        boxShadow: "0 4px 16px rgba(20,0,40,0.15)",
-        padding: "2.5rem 1.5rem",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        minHeight: "280px"
-      }}
-    >
-      <div style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: 8
-      }}>
-        {tab.key === "home" ? <PiggyAvatar size={70} /> : <span style={{
-          fontSize: 48,
-          background: `linear-gradient(90deg, ${tab.color} 60%, #fff2 100%)`,
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent"
-        }}>{tab.icon}</span>}
-        <h2 style={{
-          color: tab.color,
-          fontWeight: 800,
-          textShadow: `0 2px 8px ${tab.color}33, 0 1px 0 #0008`
-        }}>{tab.label}</h2>
-      </div>
-      <p style={{
-        fontSize: 20,
-        color: "#fffacb",
-        marginTop: 8,
-        maxWidth: 400,
-        textAlign: "center",
-        letterSpacing: 0.5
-      }}>
-        {getTabDescription(tab.key)}
-      </p>
-      {/* Placeholders for future modular component mounting */}
-      <div style={{ marginTop: 32, opacity: 0.5 }}>
-        <em>Coming soon: {tab.desc}</em>
-      </div>
-    </section>
-  );
+  switch (tab.key) {
+    case "home":
+      return <HomeDashboard />;
+    case "goal":
+      return <GoalSetup />;
+    case "game":
+      return <Gamification />;
+    case "parent":
+      return <ParentDashboard />;
+    case "learn":
+      return <LearningCenter />;
+    case "report":
+      return <SavingsReport />;
+    case "security":
+      return <SecurityAndSharing />;
+    default:
+      return null;
+  }
 }
 
 function getTabDescription(tabKey) {
